@@ -28,7 +28,7 @@ app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/budget", budgetRoutes);
 
 app.get("/", (req, res) => {
-  res.send("FinPilot API is running");
+  res.send("Finsight API is running");
 });
 
 app.get("/api/protected", protect, (req, res) => {
