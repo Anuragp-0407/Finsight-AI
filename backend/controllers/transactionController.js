@@ -100,6 +100,7 @@ const getCategorySummary = async (req, res) => {
   try {
 
     const transactions = await Transaction.find({
+      user:req.user,
       type: "expense"
     });
 
