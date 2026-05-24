@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
 
 import Login from "./pages/Login";
@@ -37,7 +37,7 @@ function App() {
 
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
 
-
+        <Route path="*" element={<Navigate to="/login" />}/>
 
         
       </Routes>
