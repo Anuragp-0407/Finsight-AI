@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -20,21 +21,21 @@ function App() {
 
         <Route path="/" element={<Login />} />
 
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<ProtectedRoute><Register /></ProtectedRoute>} />
 
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
 
-        <Route path="/add-transaction" element={<AddTransaction />} />
+        <Route path="/add-transaction" element={<ProtectedRoute><AddTransaction /></ProtectedRoute>} />
 
-        <Route path="/budgets" element={<Budgets />} />
+        <Route path="/budgets" element={<ProtectedRoute><Budgets /></ProtectedRoute>} />
 
-        <Route path="/history" element={<History />} />
+        <Route path="/history" element={<ProtectedRoute><History /></ProtectedRoute>} />
 
-        <Route path="/insights" element={<Insights />} />
+        <Route path="/insights" element={<ProtectedRoute><Insights /></ProtectedRoute>} />
 
-        <Route path="/ai-chat" element={<AIChat />} />
+        <Route path="/ai-chat" element={<ProtectedRoute><AIChat /></ProtectedRoute>} />
 
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
 
 
 
